@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 
+import '../../../models/Product.dart';
+
 class CustomAppBar extends StatelessWidget implements PreferredSize {
   const CustomAppBar({
     Key? key,
+    required this.product,
   }) : super(key: key);
+
+  final Product product;
+
   @override
   Size get preferredSize => Size.fromHeight(100);
   @override
@@ -32,7 +38,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSize {
               ),
               child: Row(
                 children: [
-                  Text('4.5'),
+                  Text('${product.rating}'),
                   SizedBox(width: 5),
                   Icon(Icons.star, size: 14, color: Colors.amber),
                 ],

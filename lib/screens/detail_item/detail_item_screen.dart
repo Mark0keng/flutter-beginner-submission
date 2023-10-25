@@ -11,7 +11,7 @@ class DetailItemScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(product: product),
       body: Body(product: product),
     );
   }
