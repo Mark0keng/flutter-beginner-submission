@@ -44,11 +44,14 @@ class _BodyState extends State<Body> {
             child: Column(
               children: <Widget>[
                 Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: List.generate(splashData.length,
-                        (index) => SplashIndex(index: index))),
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: List.generate(
+                    splashData.length,
+                    (index) => SplashIndex(index: index),
+                  ),
+                ),
                 Container(
-                  padding: EdgeInsets.only(top: 40),
+                  padding: EdgeInsets.symmetric(vertical: 10),
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(

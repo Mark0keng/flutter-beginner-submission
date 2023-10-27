@@ -11,24 +11,26 @@ class SplashContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        SizedBox(
-          height: 20,
-        ),
-        Text(
-          'Hijau.kan',
-          style: TextStyle(
-              fontSize: 36, fontWeight: FontWeight.bold, color: Colors.green),
-        ),
-        Text(text ?? 'default'),
-        SizedBox(height: 100),
-        Image.asset(
-          images ?? 'default',
-          width: 300,
-        )
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            'Hijau.kan',
+            style: TextStyle(
+                fontSize: 36, fontWeight: FontWeight.bold, color: Colors.green),
+          ),
+          Text(text ?? 'default'),
+          SizedBox(height: 100),
+          Image.asset(
+            images ?? 'default',
+            width: 300,
+          )
+        ],
+      ),
     );
   }
 }

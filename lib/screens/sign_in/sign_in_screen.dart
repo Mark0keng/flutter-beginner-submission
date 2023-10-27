@@ -8,6 +8,11 @@ class SignInScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios_rounded),
+          color: Colors.black,
+          onPressed: () => Navigator.pop(context),
+        ),
         title: Text(
           'Sign In',
           style: TextStyle(color: Colors.black),
